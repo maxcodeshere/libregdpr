@@ -1,0 +1,18 @@
+{
+    "description": "",
+    "type": "neos-site",
+    "require": {
+        "neos/neos": "*"
+    },
+    "name": "libregdrp/libregdprorg",
+    "autoload": {
+        "psr-4": {
+            "Libregdrp\\LibregdprOrg\\": "Classes/"
+        }
+    },
+    "extra": {
+        "neos": {
+            "package-key": "Libregdrp.LibregdprOrg"
+        }
+    }
+}

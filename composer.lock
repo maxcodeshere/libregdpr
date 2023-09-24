@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "294a364501a1425b5c37b00d51715384",
+    "content-hash": "65e450bcb17ee56f6775fc3c5f98d5cc",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -2530,6 +2530,32 @@
                 }
             ],
             "time": "2023-08-04T15:12:48+00:00"
+        },
+        {
+            "name": "libregdrp/libregdprorg",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "./DistributionPackages/Libregdrp.LibregdprOrg",
+                "reference": "491c6128b1cf50d5a6127257e6422d083b6036e9"
+            },
+            "require": {
+                "neos/neos": "*"
+            },
+            "type": "neos-site",
+            "extra": {
+                "neos": {
+                    "package-key": "Libregdrp.LibregdprOrg"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Libregdrp\\LibregdprOrg\\": "Classes/"
+                }
+            },
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "masterminds/html5",
@@ -11201,11 +11227,12 @@
     "stability-flags": {
         "neos/neos-ui": 20,
         "neos/setup": 20,
-        "neos/neos-setup": 20
+        "neos/neos-setup": 20,
+        "libregdrp/libregdprorg": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

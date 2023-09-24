@@ -32,7 +32,8 @@
 
         "neos/cli-setup": "~8.3.0",
         "neos/setup": "@dev",
-        "neos/neos-setup": "@dev"
+        "neos/neos-setup": "@dev",
+        "libregdrp/libregdprorg": "@dev"
     },
     "require-dev": {
         "neos/buildessentials": "~8.3.0",
