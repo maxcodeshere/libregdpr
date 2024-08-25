@@ -1,13 +1,13 @@
-baseURL: https://example.org/
+baseURL: https://libregdpr.org/
 languageCode: de-de
-title: My New Hugo Site
+title: Open Source Privacy Information
 
 defaultContentLanguage: de
 languages:
   de:
     languageName: Deutsch
     weight: 1
-    title: Hextra
+    title: LibreGDPR
   #en:
     #languageName: English
     #weight: 2
@@ -25,7 +25,7 @@ menu:
     - name: Blog
       pageRef: /blog
       weight: 2
-    - name: Über das Project
+    - name: Über das Projekt
       pageRef: /about
       weight: 3
     - name: Search
@@ -63,4 +63,4 @@ params:
   dateFormat: "2. January 2006"
   editURL:
     enable: true
-    base: "https://example.org/"
+    base: "https://libregdpr.org/"
