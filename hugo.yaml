@@ -63,4 +63,4 @@ params:
   dateFormat: "2. January 2006"
   editURL:
     enable: true
-    base: "https://libregdpr.org/"
+    base: "https://github.com/maxcodeshere/libregdpr/tree/main/content"
