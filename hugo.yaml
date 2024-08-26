@@ -42,11 +42,11 @@ menu:
       params:
         type: separator
       weight: 1
-    - name: "Über das Projekt"
-      pageRef: "/about"
-      weight: 2
     - name: "Hugo Docs ↗"
-      url: "https://gohugo.io/documentation/"
+      pageRef: "https://gohugo.io/documentation/"
+      weight: 2
+    - name: "Mermaid Docs ↗"
+      url: "https://mermaid.js.org/intro/"
       weight: 3
 
 params:
