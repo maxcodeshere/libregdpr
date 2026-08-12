@@ -9,7 +9,13 @@ weight = 20
 
 ## Gesetzestext
 
-{{< fehlt "Der Gesetzestext" >}}
+{{< abs 1 >}}
+Der Ausschuss handelt bei der Erfüllung seiner Aufgaben oder in Ausübung seiner Befugnisse gemäß den Artikeln 70 und 71 unabhängig.
+{{< /abs >}}
+
+{{< abs 2 >}}
+Unbeschadet der Ersuchen der Kommission gemäß Artikel 70 Absatz 1 Buchstabe b und Absatz 2 ersucht der Ausschuss bei der Erfüllung seiner Aufgaben oder in Ausübung seiner Befugnisse weder um Weisung noch nimmt er Weisungen entgegen.
+{{< /abs >}}
 
 ## Erwägungsgründe
 

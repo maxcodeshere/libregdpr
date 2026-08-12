@@ -9,7 +9,13 @@ weight = 50
 
 ## Gesetzestext
 
-{{< fehlt "Der Gesetzestext" >}}
+{{< abs 1 >}}
+Sofern in dieser Verordnung nichts anderes bestimmt ist, fasst der Ausschuss seine Beschlüsse mit einfacher Mehrheit seiner Mitglieder.
+{{< /abs >}}
+
+{{< abs 2 >}}
+Der Ausschuss gibt sich mit einer Mehrheit von zwei Dritteln seiner Mitglieder eine Geschäftsordnung und legt seine Arbeitsweise fest.
+{{< /abs >}}
 
 ## Erwägungsgründe
 

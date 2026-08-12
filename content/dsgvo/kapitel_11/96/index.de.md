@@ -9,7 +9,7 @@ weight = 30
 
 ## Gesetzestext
 
-{{< fehlt "Der Gesetzestext" >}}
+Internationale Übereinkünfte, die die Übermittlung personenbezogener Daten an Drittländer oder internationale Organisationen mit sich bringen, die von den Mitgliedstaaten vor dem 24. Mai 2016 abgeschlossen wurden und die im Einklang mit dem vor diesem Tag geltenden Unionsrecht stehen, bleiben in Kraft, bis sie geändert, ersetzt oder gekündigt werden.
 
 ## Erwägungsgründe
 

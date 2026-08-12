@@ -6,3 +6,5 @@ date = 2024-08-27T20:31:53+02:00
 draft = true
 weight = 120
 +++
+
+Artikel 16 Absatz 2 AEUV ermächtigt das Europäische Parlament und den Rat, Vorschriften über den Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten zu erlassen.

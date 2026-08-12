@@ -9,7 +9,17 @@ weight = 10
 
 ## Gesetzestext
 
-{{< fehlt "Der Gesetzestext" >}}
+{{< abs 1 >}}
+Diese Verordnung enthält Vorschriften zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten und zum freien Verkehr solcher Daten.
+{{< /abs >}}
+
+{{< abs 2 >}}
+Diese Verordnung schützt die Grundrechte und Grundfreiheiten natürlicher Personen und insbesondere deren Recht auf Schutz personenbezogener Daten.
+{{< /abs >}}
+
+{{< abs 3 >}}
+Der freie Verkehr personenbezogener Daten in der Union darf aus Gründen des Schutzes natürlicher Personen bei der Verarbeitung personenbezogener Daten weder eingeschränkt noch verboten werden.
+{{< /abs >}}
 
 ## Erwägungsgründe
 

@@ -9,7 +9,7 @@ weight = 10
 
 ## Gesetzestext
 
-{{< fehlt "Der Gesetzestext" >}}
+Um zur einheitlichen Anwendung dieser Verordnung in der gesamten Union beizutragen, arbeiten die Aufsichtsbehörden im Rahmen des in diesem Abschnitt beschriebenen Kohärenzverfahrens untereinander und gegebenenfalls mit der Kommission zusammen.
 
 ## Erwägungsgründe
 

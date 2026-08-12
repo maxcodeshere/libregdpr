@@ -9,7 +9,13 @@ weight = 60
 
 ## Gesetzestext
 
-{{< fehlt "Der Gesetzestext" >}}
+{{< abs 1 >}}
+Der Ausschuss wählt aus dem Kreis seiner Mitglieder mit einfacher Mehrheit einen Vorsitzenden und zwei stellvertretende Vorsitzende.
+{{< /abs >}}
+
+{{< abs 2 >}}
+Die Amtszeit des Vorsitzenden und seiner beiden Stellvertreter beträgt fünf Jahre; ihre einmalige Wiederwahl ist zulässig.
+{{< /abs >}}
 
 ## Erwägungsgründe
 

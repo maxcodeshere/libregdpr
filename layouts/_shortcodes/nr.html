@@ -13,7 +13,7 @@
 {{- end -}}
 {{- $id := printf "nr-%v" $no -}}
 <div class="gdpr-lit" id="{{ $id }}">
-  <a class="gdpr-marker" href="#{{ $id }}" aria-label="Permalink {{ $no }}">{{ $no }}.</a>
+  <a class="gdpr-marker" href="#{{ $id }}" aria-label="Permalink {{ $no }}">{{ T "nrMarker" (dict "m" $no) }}</a>
   <div class="gdpr-lit-body">
     {{- .Page.RenderString (dict "display" "block") .Inner -}}
   </div>

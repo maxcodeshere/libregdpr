@@ -9,7 +9,7 @@ weight = 10
 
 ## Legal text
 
-{{< fehlt "The legal text" >}}
+In order to contribute to the consistent application of this Regulation throughout the Union, the supervisory authorities shall cooperate with each other and, where relevant, with the Commission, through the consistency mechanism as set out in this Section.
 
 ## Recitals
 

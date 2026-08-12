@@ -19,3 +19,6 @@ missingSection: "{{ .subject }} has not been written yet. Contributions are welc
 recitalLabel: "Recital {{ .no }}"
 recitalsUnmapped: "The recitals for Article {{ .article }} have not been mapped yet. The mapping is maintained in <code>data/artikel_erwaegungsgruende.yaml</code>."
 caseLawNone: "No decision has been recorded for Article {{ .article }} yet. New decisions are added under <code>content/rechtsprechung/</code> and assigned there with <code>artikel = [{{ .article }}]</code>."
+litMarker: "({{ .m }})"
+nrMarker: "({{ .m }})"
+absMarker: "{{ .m }}."

@@ -9,7 +9,7 @@ weight = 30
 
 ## Legal text
 
-{{< fehlt "The legal text" >}}
+Member States may further determine the specific conditions for the processing of a national identification number or any other identifier of general application. In that case the national identification number or any other identifier of general application shall be used only under appropriate safeguards for the rights and freedoms of the data subject pursuant to this Regulation.
 
 ## Recitals
 

@@ -26,7 +26,7 @@
   {{- end -}}
 {{- end -}}
 <div class="gdpr-lit" id="{{ $id }}">
-  <a class="gdpr-marker" href="#{{ $id }}" aria-label="Permalink zu Buchstabe {{ $letter }}">{{ $letter }})</a>
+  <a class="gdpr-marker" href="#{{ $id }}" aria-label="Permalink zu Buchstabe {{ $letter }}">{{ T "litMarker" (dict "m" $letter) }}</a>
   <div class="gdpr-lit-body">
     {{- .Page.RenderString (dict "display" "block") .Inner -}}
   </div>
