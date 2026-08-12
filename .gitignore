@@ -11,3 +11,8 @@ hugo.linux
 
 # Temporary lock file while building
 /.hugo_build.lock
+
+# Zwischenspeicher der Textpipeline (siehe tools/README.md)
+/tools/.cache/
+__pycache__/
+*.pyc
