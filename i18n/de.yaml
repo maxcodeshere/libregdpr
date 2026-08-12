@@ -12,3 +12,8 @@ onThisPage: "Auf dieser Seite"
 poweredBy: "Unterstützt durch Hextra"
 readMore: "Mehr lesen →"
 searchPlaceholder: "Suchen..."
+# Projekteigene Texte (siehe layouts/_shortcodes)
+missingSection: "{{ .subject }} ist noch nicht erfasst. Beiträge sind willkommen."
+recitalLabel: "Erwägungsgrund {{ .no }}"
+recitalsUnmapped: "Die Erwägungsgründe zu Artikel {{ .article }} sind noch nicht zugeordnet. Die Zuordnung wird in <code>data/artikel_erwaegungsgruende.yaml</code> gepflegt."
+caseLawNone: "Zu Artikel {{ .article }} ist noch keine Entscheidung erfasst. Neue Entscheidungen werden unter <code>content/rechtsprechung/</code> angelegt und dort mit <code>artikel = [{{ .article }}]</code> zugeordnet."

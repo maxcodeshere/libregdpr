@@ -20,7 +20,7 @@
       {{- $page := $.Site.GetPage (printf "/erwaegungsgruende/eg-%v" .) -}}
       {{- if $page -}}
         <li>
-          <a href="{{ $page.RelPermalink }}">Erwägungsgrund {{ . }}</a>
+          <a href="{{ $page.RelPermalink }}">{{ T "recitalLabel" (dict "no" .) }}</a>
           {{- with $page.Summary }} <span class="gdpr-eg-teaser">{{ . | plainify | truncate 180 }}</span>{{ end -}}
         </li>
       {{- else -}}
@@ -29,5 +29,5 @@
     {{- end -}}
   </ul>
 {{- else -}}
-  {{- partial "gdpr-hinweis.html" (printf "Die Erwägungsgründe zu Artikel %s sind noch nicht zugeordnet. Die Zuordnung wird in <code>data/artikel_erwaegungsgruende.yaml</code> gepflegt." $no) -}}
+  {{- partial "gdpr-hinweis.html" (T "recitalsUnmapped" (dict "article" $no)) -}}
 {{- end -}}

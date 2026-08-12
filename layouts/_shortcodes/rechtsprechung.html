@@ -37,5 +37,5 @@
     {{- end -}}
   </ul>
 {{- else -}}
-  {{- partial "gdpr-hinweis.html" (printf "Zu Artikel %s ist noch keine Entscheidung erfasst. Neue Entscheidungen werden unter <code>content/rechtsprechung/</code> angelegt und dort mit <code>artikel = [%s]</code> zugeordnet." $no $no) -}}
+  {{- partial "gdpr-hinweis.html" (T "caseLawNone" (dict "article" $no)) -}}
 {{- end -}}
