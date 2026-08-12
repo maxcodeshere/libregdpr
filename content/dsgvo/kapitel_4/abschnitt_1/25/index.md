@@ -1,0 +1,24 @@
++++
+title = 'Artikel 25 - Datenschutz durch Technikgestaltung und durch datenschutzfreundliche Voreinstellungen'
+linkTitle = 'Art. 25 - Datenschutz durch Technikgestaltung'
+slug = 'art-25'
+date = 2024-08-27T20:31:53+02:00
+draft = true
+weight = 20
++++
+
+## Gesetzestext
+
+{{< fehlt "Der Gesetzestext" >}}
+
+## Erwägungsgründe
+
+{{< erwaegungsgruende >}}
+
+## Rechtsprechung und Behördenentscheidungen
+
+{{< rechtsprechung >}}
+
+## Kommentar
+
+{{< fehlt "Ein Kommentar" >}}

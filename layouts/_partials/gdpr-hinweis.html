@@ -1,0 +1,10 @@
+{{- /*
+  Hinweis auf noch fehlende Inhalte.
+
+      {{ partial "gdpr-hinweis.html" "Text des Hinweises" }}
+
+  Bewusst kein Rueckgriff auf Hextras callout-Partial: das erwartet fertige
+  Tailwind-Klassen und wuerde bei jedem Theme-Update nachgezogen werden
+  muessen. Die Gestaltung steht in assets/css/custom.css.
+*/ -}}
+<div class="gdpr-hinweis" role="note">{{ . | safeHTML }}</div>

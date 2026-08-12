@@ -1,0 +1,24 @@
++++
+title = 'Artikel 42 - Zertifizierung'
+linkTitle = 'Art. 42 - Zertifizierung'
+slug = 'art-42'
+date = 2024-08-27T20:31:53+02:00
+draft = true
+weight = 30
++++
+
+## Gesetzestext
+
+{{< fehlt "Der Gesetzestext" >}}
+
+## Erwägungsgründe
+
+{{< erwaegungsgruende >}}
+
+## Rechtsprechung und Behördenentscheidungen
+
+{{< rechtsprechung >}}
+
+## Kommentar
+
+{{< fehlt "Ein Kommentar" >}}

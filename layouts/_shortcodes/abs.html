@@ -1,0 +1,22 @@
+{{- /*
+  Ein Absatz eines Artikels.
+
+      {{< abs 1 >}}
+      Der Verantwortliche trifft geeignete Maßnahmen ...
+      {{< /abs >}}
+
+  Erzeugt einen stabilen Anker (#abs-1), damit auf "Art. 6 Abs. 1" direkt
+  verlinkt werden kann. Die Absatznummer selbst ist der Permalink.
+*/ -}}
+{{- $no := .Get 0 -}}
+{{- if not $no -}}
+  {{- errorf "abs: Absatznummer fehlt (%s)" .Position -}}
+{{- end -}}
+{{- /* .Get liefert bei "{{< abs 1 >}}" einen int, daher %v statt %s */ -}}
+{{- $id := printf "abs-%v" $no -}}
+<div class="gdpr-abs" id="{{ $id }}">
+  <a class="gdpr-marker" href="#{{ $id }}" aria-label="Permalink zu Absatz {{ $no }}">({{ $no }})</a>
+  <div class="gdpr-abs-body">
+    {{- .Page.RenderString (dict "display" "block") .Inner -}}
+  </div>
+</div>

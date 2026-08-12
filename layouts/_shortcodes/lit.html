@@ -1,0 +1,29 @@
+{{- /*
+  Ein Buchstabe innerhalb eines Absatzes.
+
+      {{< abs 1 >}}
+      Die Verarbeitung ist nur rechtmäßig, wenn ...
+      {{< lit a >}}die betroffene Person hat ihre Einwilligung erteilt;{{< /lit >}}
+      {{< lit b >}}die Verarbeitung ist für die Erfüllung eines Vertrags ...{{< /lit >}}
+      {{< /abs >}}
+
+  Die Absatznummer wird vom umschliessenden abs-Shortcode uebernommen, damit
+  der Anker der Zitierweise entspricht: #abs-1-lit-b == "Abs. 1 lit. b".
+  Ohne umschliessenden Absatz faellt der Anker auf #lit-b zurueck.
+*/ -}}
+{{- $letter := .Get 0 -}}
+{{- if not $letter -}}
+  {{- errorf "lit: Buchstabe fehlt (%s)" .Position -}}
+{{- end -}}
+{{- $id := printf "lit-%v" $letter -}}
+{{- with .Parent -}}
+  {{- if eq .Name "abs" -}}
+    {{- $id = printf "abs-%v-lit-%v" (.Get 0) $letter -}}
+  {{- end -}}
+{{- end -}}
+<div class="gdpr-lit" id="{{ $id }}">
+  <a class="gdpr-marker" href="#{{ $id }}" aria-label="Permalink zu Buchstabe {{ $letter }}">{{ $letter }})</a>
+  <div class="gdpr-lit-body">
+    {{- .Page.RenderString (dict "display" "block") .Inner -}}
+  </div>
+</div>

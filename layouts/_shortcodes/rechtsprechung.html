@@ -1,0 +1,41 @@
+{{- /*
+  Listet Gerichts- und Behoerdenentscheidungen zum Artikel auf.
+
+      {{< rechtsprechung >}}
+
+  Eine Entscheidung betrifft haeufig mehrere Artikel (ein EuGH-Urteil etwa
+  Art. 6, 15 und 82). Sie wird deshalb einmal unter /rechtsprechung/ erfasst
+  und dort im Front Matter mit "artikel = [6, 15, 82]" zugeordnet. Diese
+  Liste entsteht daraus automatisch -- es gibt keine Querverweise von Hand
+  zu pflegen.
+*/ -}}
+{{- $slug := .Page.Slug -}}
+{{- if not (hasPrefix $slug "art-") -}}
+  {{- errorf "rechtsprechung: nur auf Artikelseiten verwendbar (%s)" .Position -}}
+{{- end -}}
+{{- $no := strings.TrimPrefix "art-" $slug -}}
+{{- $term := .Site.GetPage (printf "/artikel/%s" $no) -}}
+
+{{- $entscheidungen := slice -}}
+{{- with $term -}}
+  {{- $entscheidungen = .Pages.ByDate.Reverse -}}
+{{- end -}}
+
+{{- if $entscheidungen -}}
+  <ul class="gdpr-rspr-list">
+    {{- range $entscheidungen -}}
+      {{- $e := . -}}
+      <li>
+        <a href="{{ $e.RelPermalink }}">{{ partial "utils/title" $e }}</a>
+        {{- with $e.Params.gericht -}}
+          <span class="gdpr-rspr-meta">{{ . }}
+            {{- with $e.Params.az }}, {{ . }}{{ end -}}
+            {{- if not $e.Date.IsZero }}, {{ $e.Date.Format "02.01.2006" }}{{ end -}}
+          </span>
+        {{- end -}}
+      </li>
+    {{- end -}}
+  </ul>
+{{- else -}}
+  {{- partial "gdpr-hinweis.html" (printf "Zu Artikel %s ist noch keine Entscheidung erfasst. Neue Entscheidungen werden unter <code>content/rechtsprechung/</code> angelegt und dort mit <code>artikel = [%s]</code> zugeordnet." $no $no) -}}
+{{- end -}}

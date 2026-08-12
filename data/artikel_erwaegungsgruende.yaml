@@ -1,0 +1,17 @@
+# Zuordnung Artikel -> Erwaegungsgruende
+#
+# Erwaegungsgruende gehoeren oft zu mehreren Artikeln (EG 47 etwa zu Art. 6
+# Abs. 1 lit. f und zu Art. 21). Der Text steht deshalb genau einmal unter
+# /erwaegungsgruende/ und wird auf den Artikelseiten nur eingebunden. So gibt
+# es keine Dubletten in der Suche und nur eine Stelle zum Korrigieren.
+#
+# Format: Artikelnummer als Schluessel, Liste der Erwaegungsgrundnummern.
+#
+#   6:  [39, 40, 41, 44, 45, 46, 47, 48, 49, 50]
+#   17: [65, 66]
+#   32: [83]
+#
+# ACHTUNG: Die Zuordnung ist eine fachliche Aussage und noch nicht erfasst.
+# Sie muss vor der Veroeffentlichung anhand der Verordnung geprueft werden.
+# Solange ein Artikel hier fehlt, weist die Artikelseite das offen aus.
+{}

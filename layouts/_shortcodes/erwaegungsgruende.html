@@ -1,0 +1,33 @@
+{{- /*
+  Bindet die zum Artikel gehoerenden Erwaegungsgruende ein.
+
+      {{< erwaegungsgruende >}}
+
+  Die Zuordnung steht in data/artikel_erwaegungsgruende.yaml, der Text selbst
+  nur unter /erwaegungsgruende/. Hier wird ausschliesslich verlinkt und
+  zitiert, damit es keine zweite Fassung desselben Textes gibt.
+*/ -}}
+{{- $slug := .Page.Slug -}}
+{{- if not (hasPrefix $slug "art-") -}}
+  {{- errorf "erwaegungsgruende: nur auf Artikelseiten verwendbar (%s)" .Position -}}
+{{- end -}}
+{{- $no := strings.TrimPrefix "art-" $slug -}}
+{{- $numbers := index hugo.Data.artikel_erwaegungsgruende $no -}}
+
+{{- if $numbers -}}
+  <ul class="gdpr-eg-list">
+    {{- range $numbers -}}
+      {{- $page := $.Site.GetPage (printf "/erwaegungsgruende/eg-%v" .) -}}
+      {{- if $page -}}
+        <li>
+          <a href="{{ $page.RelPermalink }}">Erwägungsgrund {{ . }}</a>
+          {{- with $page.Summary }} <span class="gdpr-eg-teaser">{{ . | plainify | truncate 180 }}</span>{{ end -}}
+        </li>
+      {{- else -}}
+        {{- warnf "erwaegungsgruende: EG %v (Artikel %s) existiert nicht" . $no -}}
+      {{- end -}}
+    {{- end -}}
+  </ul>
+{{- else -}}
+  {{- partial "gdpr-hinweis.html" (printf "Die Erwägungsgründe zu Artikel %s sind noch nicht zugeordnet. Die Zuordnung wird in <code>data/artikel_erwaegungsgruende.yaml</code> gepflegt." $no) -}}
+{{- end -}}
