@@ -1,21 +1,28 @@
 baseURL: https://libregdpr.org/
-languageCode: de-de
+locale: de-de
 title: Open Source Privacy Information
 
 defaultContentLanguage: de
 languages:
   de:
-    languageName: Deutsch
+    label: Deutsch
     weight: 1
     title: LibreGDPR
   #en:
-    #languageName: English
+    #label: English
     #weight: 2
     #title: Hextra
 
 module:
   imports:
     - path: github.com/imfing/hextra
+
+# Article URLs are decoupled from the content tree: the directory layout
+# (chapter/article) drives the sidebar, the front matter slug drives the URL.
+# Art. 32 stays at /dsgvo/art-32/ even if the tree is reorganised.
+permalinks:
+  page:
+    dsgvo: /dsgvo/:slug/
 
 menu:
   main:

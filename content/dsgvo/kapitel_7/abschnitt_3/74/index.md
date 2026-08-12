@@ -1,0 +1,8 @@
++++
+title = 'Artikel 74 - Aufgaben des Vorsitzes'
+linkTitle = 'Art. 74 - Aufgaben des Vorsitzes'
+slug = 'art-74'
+date = 2024-08-27T20:31:53+02:00
+draft = true
+weight = 70
++++
