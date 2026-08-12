@@ -23,24 +23,45 @@ module:
 permalinks:
   page:
     dsgvo: /dsgvo/:slug/
+    erwaegungsgruende: /erwaegungsgruende/:slug/
+
+# Entscheidungen betreffen fast immer mehrere Artikel gleichzeitig. Sie werden
+# deshalb einmal erfasst und ueber diese Taxonomie den Artikeln zugeordnet,
+# statt sie pro Artikel zu wiederholen.
+taxonomies:
+  artikel: artikel
+
+markup:
+  goldmark:
+    renderer:
+      # Shortcodes wie abs/lit geben HTML aus, das anschliessend wieder durch
+      # den Markdown-Renderer laeuft. Ohne unsafe wird es stillschweigend
+      # verworfen. Inhalte stammen ausschliesslich aus diesem Repository.
+      unsafe: true
 
 menu:
   main:
     - name: DSGVO
       pageRef: /dsgvo
       weight: 1
+    - name: Erwägungsgründe
+      pageRef: /erwaegungsgruende
+      weight: 2
+    - name: Rechtsprechung
+      pageRef: /rechtsprechung
+      weight: 3
     - name: Blog
       pageRef: /blog
-      weight: 2
+      weight: 4
     - name: Über das Projekt
       pageRef: /about
-      weight: 3
+      weight: 5
     - name: Search
-      weight: 4
+      weight: 6
       params:
         type: search
     - name: GitHub
-      weight: 5
+      weight: 7
       url: "https://github.com/maxcodeshere/libregdpr"
       params:
         icon: github    

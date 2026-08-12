@@ -1,0 +1,10 @@
+{{- /*
+  Platzhalter fuer einen noch nicht geschriebenen Abschnitt.
+
+      {{< fehlt "Gesetzestext" >}}
+
+  Macht auf der Seite sichtbar, was noch fehlt, statt einen leeren Abschnitt
+  zu zeigen, der wie fertiger Inhalt aussieht.
+*/ -}}
+{{- $was := .Get 0 | default "Dieser Abschnitt" -}}
+{{- partial "gdpr-hinweis.html" (printf "%s ist noch nicht erfasst. Beiträge sind willkommen." $was) -}}
