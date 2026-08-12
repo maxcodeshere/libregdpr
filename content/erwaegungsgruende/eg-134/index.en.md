@@ -6,3 +6,5 @@ date = 2024-08-27T20:31:53+02:00
 draft = true
 weight = 1340
 +++
+
+Each supervisory authority should, where appropriate, participate in joint operations with other supervisory authorities. The requested supervisory authority should be obliged to respond to the request within a specified time period.

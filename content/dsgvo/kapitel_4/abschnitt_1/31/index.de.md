@@ -9,7 +9,7 @@ weight = 80
 
 ## Gesetzestext
 
-{{< fehlt "Der Gesetzestext" >}}
+Der Verantwortliche und der Auftragsverarbeiter und gegebenenfalls deren Vertreter arbeiten auf Anfrage mit der Aufsichtsbehörde bei der Erfüllung ihrer Aufgaben zusammen.
 
 ## Erwägungsgründe
 

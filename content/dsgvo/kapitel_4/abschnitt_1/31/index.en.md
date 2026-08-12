@@ -9,7 +9,7 @@ weight = 80
 
 ## Legal text
 
-{{< fehlt "The legal text" >}}
+The controller and the processor and, where applicable, their representatives, shall cooperate, on request, with the supervisory authority in the performance of its tasks.
 
 ## Recitals
 

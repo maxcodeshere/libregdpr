@@ -17,3 +17,6 @@ missingSection: "{{ .subject }} ist noch nicht erfasst. Beiträge sind willkomme
 recitalLabel: "Erwägungsgrund {{ .no }}"
 recitalsUnmapped: "Die Erwägungsgründe zu Artikel {{ .article }} sind noch nicht zugeordnet. Die Zuordnung wird in <code>data/artikel_erwaegungsgruende.yaml</code> gepflegt."
 caseLawNone: "Zu Artikel {{ .article }} ist noch keine Entscheidung erfasst. Neue Entscheidungen werden unter <code>content/rechtsprechung/</code> angelegt und dort mit <code>artikel = [{{ .article }}]</code> zugeordnet."
+litMarker: "{{ .m }})"
+nrMarker: "{{ .m }}."
+absMarker: "({{ .m }})"

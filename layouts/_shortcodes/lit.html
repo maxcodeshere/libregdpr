@@ -15,14 +15,18 @@
 {{- if not $letter -}}
   {{- errorf "lit: Buchstabe fehlt (%s)" .Position -}}
 {{- end -}}
+{{- /* Der Anker erbt vom umschliessenden Absatz bzw. von der Nummer, damit er
+       der Zitierweise entspricht: #abs-1-lit-b, #nr-26-lit-a. */ -}}
 {{- $id := printf "lit-%v" $letter -}}
 {{- with .Parent -}}
   {{- if eq .Name "abs" -}}
     {{- $id = printf "abs-%v-lit-%v" (.Get 0) $letter -}}
+  {{- else if eq .Name "nr" -}}
+    {{- $id = printf "nr-%v-lit-%v" (.Get 0) $letter -}}
   {{- end -}}
 {{- end -}}
 <div class="gdpr-lit" id="{{ $id }}">
-  <a class="gdpr-marker" href="#{{ $id }}" aria-label="Permalink zu Buchstabe {{ $letter }}">{{ $letter }})</a>
+  <a class="gdpr-marker" href="#{{ $id }}" aria-label="Permalink zu Buchstabe {{ $letter }}">{{ T "litMarker" (dict "m" $letter) }}</a>
   <div class="gdpr-lit-body">
     {{- .Page.RenderString (dict "display" "block") .Inner -}}
   </div>

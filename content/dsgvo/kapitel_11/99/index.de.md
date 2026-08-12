@@ -9,7 +9,13 @@ weight = 60
 
 ## Gesetzestext
 
-{{< fehlt "Der Gesetzestext" >}}
+{{< abs 1 >}}
+Diese Verordnung tritt am zwanzigsten Tag nach ihrer Veröffentlichung im Amtsblatt der Europäischen Union in Kraft.
+{{< /abs >}}
+
+{{< abs 2 >}}
+Sie gilt ab dem 25. Mai 2018.
+{{< /abs >}}
 
 ## Erwägungsgründe
 

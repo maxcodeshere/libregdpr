@@ -9,7 +9,7 @@ weight = 20
 
 ## Gesetzestext
 
-{{< fehlt "Der Gesetzestext" >}}
+Diese Verordnung erlegt natürlichen oder juristischen Personen in Bezug auf die Verarbeitung in Verbindung mit der Bereitstellung öffentlich zugänglicher elektronischer Kommunikationsdienste in öffentlichen Kommunikationsnetzen in der Union keine zusätzlichen Pflichten auf, soweit sie besonderen in der Richtlinie 2002/58/EG festgelegten Pflichten unterliegen, die dasselbe Ziel verfolgen.
 
 ## Erwägungsgründe
 

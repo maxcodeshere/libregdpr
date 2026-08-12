@@ -9,7 +9,9 @@ weight = 50
 
 ## Gesetzestext
 
-{{< fehlt "Der Gesetzestext" >}}
+Die Kommission kann Durchführungsrechtsakte von allgemeiner Tragweite zur Festlegung der Ausgestaltung des elektronischen Informationsaustauschs zwischen den Aufsichtsbehörden sowie zwischen den Aufsichtsbehörden und dem Ausschuss, insbesondere des standardisierten Formats nach Artikel 64, erlassen.
+
+Diese Durchführungsrechtsakte werden gemäß dem Prüfverfahren nach Artikel 93 Absatz 2 erlassen.
 
 ## Erwägungsgründe
 

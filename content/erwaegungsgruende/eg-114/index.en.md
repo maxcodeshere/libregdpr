@@ -6,3 +6,5 @@ date = 2024-08-27T20:31:53+02:00
 draft = true
 weight = 1140
 +++
+
+In any case, where the Commission has taken no decision on the adequate level of data protection in a third country, the controller or processor should make use of solutions that provide data subjects with enforceable and effective rights as regards the processing of their data in the Union once those data have been transferred so that that they will continue to benefit from fundamental rights and safeguards.

@@ -1,0 +1,20 @@
+{{- /*
+  Eine Nummer innerhalb eines Artikels, z. B. die Begriffsbestimmungen in
+  Art. 4, die als "Art. 4 Nr. 1" zitiert werden.
+
+      {{< nr 1 >}}„personenbezogene Daten“ alle Informationen ...{{< /nr >}}
+
+  Anders als {{< lit >}} steht die Nummer nicht unter einem Absatz, sondern
+  direkt unter dem Artikel; der Anker ist daher #nr-1.
+*/ -}}
+{{- $no := .Get 0 -}}
+{{- if not $no -}}
+  {{- errorf "nr: Nummer fehlt (%s)" .Position -}}
+{{- end -}}
+{{- $id := printf "nr-%v" $no -}}
+<div class="gdpr-lit" id="{{ $id }}">
+  <a class="gdpr-marker" href="#{{ $id }}" aria-label="Permalink {{ $no }}">{{ T "nrMarker" (dict "m" $no) }}</a>
+  <div class="gdpr-lit-body">
+    {{- .Page.RenderString (dict "display" "block") .Inner -}}
+  </div>
+</div>

@@ -6,3 +6,5 @@ date = 2024-08-27T20:31:53+02:00
 draft = true
 weight = 440
 +++
+
+Processing should be lawful where it is necessary in the context of a contract or the intention to enter into a contract.
