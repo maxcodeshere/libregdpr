@@ -1,33 +1,132 @@
 baseURL: https://libregdpr.org/
-locale: de-de
 title: Open Source Privacy Information
 
+# Deutsch bleibt an der Wurzel (/dsgvo/art-32/), Englisch liegt unter /en/.
 defaultContentLanguage: de
+defaultContentLanguageInSubdir: false
+
 languages:
   de:
+    locale: de-de
     label: Deutsch
     weight: 1
     title: LibreGDPR
-  #en:
-    #label: English
-    #weight: 2
-    #title: Hextra
+    params:
+      dateFormat: "2. January 2006"
+    # Die URL haengt am Slug im Front Matter, nicht am Verzeichnisbaum. Beide
+    # Sprachen teilen sich denselben Baum, aber nicht dieselbe URL-Sprache.
+    permalinks:
+      page:
+        dsgvo: /dsgvo/:slug/
+        erwaegungsgruende: /erwaegungsgruende/:slug/
+        rechtsprechung: /rechtsprechung/:slug/
+    menus:
+      # Bewusst url statt pageRef: Hextra baut die Adresse aus dem pageRef-String
+      # (relLangURL) und loest die Seite nicht auf. Da die Abschnitte eigene
+      # URLs haben, zeigte pageRef sonst ins Leere.
+      main:
+        - name: DSGVO
+          url: /dsgvo/
+          weight: 1
+        - name: Erwägungsgründe
+          url: /erwaegungsgruende/
+          weight: 2
+        - name: Rechtsprechung
+          url: /rechtsprechung/
+          weight: 3
+        - name: Blog
+          url: /blog/
+          weight: 4
+        - name: Über das Projekt
+          url: /about/
+          weight: 5
+        - name: Search
+          weight: 6
+          params:
+            type: search
+        - name: Sprache
+          weight: 7
+          params:
+            type: language-switch
+        - name: GitHub
+          weight: 8
+          url: "https://github.com/maxcodeshere/libregdpr"
+          params:
+            icon: github
+      sidebar:
+        - name: Mehr
+          params:
+            type: separator
+          weight: 1
+        - name: "Hugo Docs ↗"
+          url: "https://gohugo.io/documentation/"
+          weight: 2
+        - name: "Mermaid Docs ↗"
+          url: "https://mermaid.js.org/intro/"
+          weight: 3
+
+  en:
+    locale: en-gb
+    label: English
+    weight: 2
+    title: LibreGDPR
+    params:
+      dateFormat: "2 January 2006"
+    permalinks:
+      page:
+        dsgvo: /gdpr/:slug/
+        erwaegungsgruende: /recitals/:slug/
+        rechtsprechung: /case-law/:slug/
+    menus:
+      main:
+        - name: GDPR
+          url: /en/gdpr/
+          weight: 1
+        - name: Recitals
+          url: /en/recitals/
+          weight: 2
+        - name: Case law
+          url: /en/case-law/
+          weight: 3
+        - name: Blog
+          url: /en/blog/
+          weight: 4
+        - name: About
+          url: /en/about/
+          weight: 5
+        - name: Search
+          weight: 6
+          params:
+            type: search
+        - name: Language
+          weight: 7
+          params:
+            type: language-switch
+        - name: GitHub
+          weight: 8
+          url: "https://github.com/maxcodeshere/libregdpr"
+          params:
+            icon: github
+      sidebar:
+        - name: More
+          params:
+            type: separator
+          weight: 1
+        - name: "Hugo Docs ↗"
+          url: "https://gohugo.io/documentation/"
+          weight: 2
+        - name: "Mermaid Docs ↗"
+          url: "https://mermaid.js.org/intro/"
+          weight: 3
 
 module:
   imports:
     - path: github.com/imfing/hextra
 
-# Article URLs are decoupled from the content tree: the directory layout
-# (chapter/article) drives the sidebar, the front matter slug drives the URL.
-# Art. 32 stays at /dsgvo/art-32/ even if the tree is reorganised.
-permalinks:
-  page:
-    dsgvo: /dsgvo/:slug/
-    erwaegungsgruende: /erwaegungsgruende/:slug/
-
 # Entscheidungen betreffen fast immer mehrere Artikel gleichzeitig. Sie werden
 # deshalb einmal erfasst und ueber diese Taxonomie den Artikeln zugeordnet,
-# statt sie pro Artikel zu wiederholen.
+# statt sie pro Artikel zu wiederholen. Bewusst sprachunabhaengig: die
+# Artikelnummer ist in beiden Sprachen dieselbe.
 taxonomies:
   artikel: artikel
 
@@ -38,44 +137,6 @@ markup:
       # den Markdown-Renderer laeuft. Ohne unsafe wird es stillschweigend
       # verworfen. Inhalte stammen ausschliesslich aus diesem Repository.
       unsafe: true
-
-menu:
-  main:
-    - name: DSGVO
-      pageRef: /dsgvo
-      weight: 1
-    - name: Erwägungsgründe
-      pageRef: /erwaegungsgruende
-      weight: 2
-    - name: Rechtsprechung
-      pageRef: /rechtsprechung
-      weight: 3
-    - name: Blog
-      pageRef: /blog
-      weight: 4
-    - name: Über das Projekt
-      pageRef: /about
-      weight: 5
-    - name: Search
-      weight: 6
-      params:
-        type: search
-    - name: GitHub
-      weight: 7
-      url: "https://github.com/maxcodeshere/libregdpr"
-      params:
-        icon: github    
-  sidebar:
-    - name: Mehr
-      params:
-        type: separator
-      weight: 1
-    - name: "Hugo Docs ↗"
-      pageRef: "https://gohugo.io/documentation/"
-      weight: 2
-    - name: "Mermaid Docs ↗"
-      url: "https://mermaid.js.org/intro/"
-      weight: 3
 
 params:
   theme:
@@ -88,7 +149,6 @@ params:
     displayPoweredBy: true
     width: normal
   displayUpdatedDate: true
-  dateFormat: "2. January 2006"
   editURL:
     enable: true
     base: "https://github.com/maxcodeshere/libregdpr/tree/main/content"
